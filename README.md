@@ -138,7 +138,7 @@
         }
 
         .subtitle {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             color: var(--accent);
             margin-bottom: 2rem;
         }
@@ -173,21 +173,83 @@
         /* Section Container */
         section {
             position: relative;
-            max-width: 1200px;
-            margin: 5rem auto;
-            padding: 2rem;
-            z-index: 1;
+            max-width: 1400px; /* wider to allow larger education layout */
+            margin: 6rem auto;  /* more vertical space */
+            padding: 3rem;      /* increased padding for breathing room */
+            z-index: 2;
             /* ensure sections are visible when targeted (offset for fixed nav) */
-            scroll-margin-top: 100px;
+            scroll-margin-top: 120px;
         }
 
         .section-title {
-            font-size: 2.5rem;
+            font-size: 3rem; /* larger for better visibility */
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+
+        /* Emphasize Education section */
+        #education {
+            max-width: 1400px;
+            margin: 6rem auto;
+            padding: 3rem;
+            z-index: 3;
+            position: relative;
+        }
+
+        /* Make the card inside education larger and more prominent */
+        #education .card {
+            padding: 3rem 3.5rem;
+            border-radius: 24px;
+            background: rgba(255,255,255,0.07);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255,255,255,0.12);
+            box-shadow: 0 30px 60px rgba(13,110,253,0.12);
+        }
+
+        /* Larger table for readability */
+        #education table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            font-size: 1.05rem;
+        }
+
+        #education th, #education td {
+            padding: 1.2rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        #education th {
+            background: rgba(13,110,253,0.18);
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 1.05rem;
+        }
+
+        #education td strong {
+            color: var(--light);
+            font-size: 1.05rem;
+        }
+
+        /* Make certification/timeline cards in education more visible */
+        #education .timeline .card {
+            padding: 1.5rem 2rem;
+            border-radius: 18px;
+            background: rgba(255,255,255,0.05);
+            box-shadow: 0 18px 36px rgba(0,0,0,0.25);
+        }
+
+        /* Responsive adjustments to keep education readable on small screens */
+        @media (max-width: 768px) {
+            section { padding: 1.6rem; margin: 3.5rem auto; max-width: 95%; }
+            .section-title { font-size: 2.2rem; }
+            #education .card { padding: 1.6rem; }
+            #education table { font-size: 0.98rem; }
+            #education th, #education td { padding: 0.9rem 0.6rem; }
         }
 
         /* Cards */
