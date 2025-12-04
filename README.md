@@ -117,12 +117,7 @@ MCA graduate with hands-on experience in **full-stack development**, specializin
 
 ---
 
-<!-- 🐍 CONTRIBUTION SNAKE -->
-## 🐍 Contribution Animation
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/dhruvpateltural/dhruvpateltural/output/github-contribution-grid-snake.svg" />
-</p>
 
 ---
 
