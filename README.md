@@ -119,12 +119,6 @@ Gogate Jogalekar College (2020–2023)
 
 ---
 
-## 📊 GitHub Performance  
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=dhruvpateltural&show_icons=true&theme=algolia" width="48%" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=dhruvpateltural&theme=algolia" width="48%" />
-</p>
 
 ---
 
