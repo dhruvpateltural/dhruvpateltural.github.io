@@ -101,25 +101,7 @@ MCA graduate with hands-on experience in **full-stack development**, specializin
 ✅ Analytical Thinking  
 ✅ Time Management  
 
----
 
-<!-- 📊 GITHUB STATS -->
-## 📊 GitHub Performance 📈
-
-<p align="center">
-  <img width="48%" src="https://github-readme-stats.vercel.app/api?username=dhruvpateltural&show_icons=true&theme=algolia"/>
-  <img width="48%" src="https://github-readme-streak-stats.herokuapp.com/?user=dhruvpateltural&theme=algolia"/>
-</p>
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=dhruvpateltural&theme=react-dark"/>
-</p>
-
----
-
-
-
----
 
 <!-- 🚀 OBJECTIVE -->
 ## 🚀 Career Objective
