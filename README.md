@@ -1,4 +1,3 @@
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -178,6 +177,8 @@
             margin: 5rem auto;
             padding: 2rem;
             z-index: 1;
+            /* ensure sections are visible when targeted (offset for fixed nav) */
+            scroll-margin-top: 100px;
         }
 
         .section-title {
