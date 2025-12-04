@@ -2,15 +2,7 @@
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:4169E1,100:00C6FF&height=220&section=header&text=Dhruv%20Manohar%20Patel&fontSize=40&fontColor=ffffff&animation=fadeIn" />
 </p>
 
-<div align="center">
-    <a href="https://github.com/dhruvpateltural">
-        <img src="https://avatars.githubusercontent.com/u/YOUR_GITHUB_ID?v=4" width="140" alt="Dhruv's Avatar" style="border-radius:50%; border: 4px solid #4169E1; margin-bottom: 20px;">
-    </a>
-    
-    <p>
-        <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=22&pause=1000&color=4169E1&center=true&vCenter=true&width=500&lines=Full+Stack+.NET+Developer;Backend+Specialist;SQL+%26+Database+Architect;MCA+Graduate" alt="Typing SVG" /></a>
-    </p>
-</div>
+
 
 <p align="center">
     <a href="https://linkedin.com/in/dhruvpateltural" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>
