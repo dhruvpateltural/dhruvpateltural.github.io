@@ -1,8 +1,9 @@
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dhruv Manohar Patel - Full Stack .NET Developer</title>
+    <title>Dhruv Manohar Patel - Portfolio</title>
     <style>
         * {
             margin: 0;
@@ -11,72 +12,57 @@
         }
 
         :root {
-            --primary: #0d6efd;
-            --secondary: #6f42c1;
-            --dark: #0a0e27;
-            --darker: #050811;
-            --light: #e8e9f3;
-            --accent: #00d4ff;
+            --bg-light: #fafafa;
+            --bg-white: #ffffff;
+            --text-dark: #1a1a1a;
+            --text-gray: #666666;
+            --accent: #ff6b6b;
+            --accent-light: #ff8787;
+            --accent-dark: #ff5252;
+            --border: #e0e0e0;
+            --shadow: rgba(0, 0, 0, 0.08);
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, var(--darker) 0%, var(--dark) 100%);
-            color: var(--light);
-            overflow-x: hidden;
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
         }
 
-        /* Animated Background */
-        .bg-animation {
-            position: fixed;
-            width: 100%;
-            height: 100%;
+        /* Header Navigation */
+        header {
+            background: var(--bg-white);
+            padding: 1.5rem 5%;
+            position: sticky;
             top: 0;
-            left: 0;
-            z-index: 0;
-            overflow: hidden;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border);
+            box-shadow: 0 2px 10px var(--shadow);
         }
 
-        .bg-animation span {
-            position: absolute;
-            width: 2px;
-            height: 2px;
-            background: var(--accent);
-            box-shadow: 0 0 10px var(--accent);
-            border-radius: 50%;
-            animation: float 15s infinite;
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0) translateX(0); opacity: 0; }
-            10% { opacity: 1; }
-            90% { opacity: 1; }
-            100% { transform: translateY(-100vh) translateX(100px); opacity: 0; }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent);
         }
-
-        /* Navigation */
-       nav {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        /* Adjusted background for better visibility/blur */
-        background: rgba(10, 14, 39, 0.9); 
-        backdrop-filter: blur(10px);
-        padding: 1rem 5%; /* Slight adjustment */
-        z-index: 1000;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
 
         nav ul {
             display: flex;
-            justify-content: center;
-            gap: 2rem;
             list-style: none;
-            flex-wrap: wrap;
+            gap: 2rem;
         }
 
         nav a {
-            color: var(--light);
+            color: var(--text-dark);
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s;
@@ -90,7 +76,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            background: var(--accent);
             transition: width 0.3s;
         }
 
@@ -100,130 +86,124 @@
 
         /* Hero Section */
         .hero {
-            position: relative;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
             text-align: center;
-            padding: 2rem;
-            z-index: 1;
         }
 
-        .hero-content {
-            animation: fadeInUp 1s ease-out;
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+            line-height: 1.2;
         }
 
-        .profile-img {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            border: 4px solid var(--primary);
-            box-shadow: 0 0 40px rgba(13, 110, 253, 0.5);
-            margin-bottom: 2rem;
-            animation: float-img 3s ease-in-out infinite;
-        }
-
-        @keyframes float-img {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-        }
-
-        h1 {
-            font-size: 3.5rem;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+        .gradient-text {
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 1rem;
         }
 
-        .subtitle {
+        .hero p {
             font-size: 1.5rem;
-            color: var(--accent);
+            color: var(--text-gray);
             margin-bottom: 2rem;
         }
 
-        .social-links {
+        .hero-buttons {
             display: flex;
             gap: 1rem;
             justify-content: center;
             flex-wrap: wrap;
-            margin-top: 2rem;
         }
 
-        .social-btn {
-            padding: 0.8rem 2rem;
+        .btn {
+            padding: 1rem 2.5rem;
             border-radius: 50px;
             text-decoration: none;
-            color: white;
             font-weight: 600;
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: all 0.3s;
             display: inline-block;
+            font-size: 1rem;
         }
 
-        .social-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
         }
 
-        .linkedin { background: linear-gradient(135deg, #0A66C2, #004182); }
-        .github { background: linear-gradient(135deg, #333, #000); }
-        .email { background: linear-gradient(135deg, #D14836, #8B0000); }
+        .btn-primary:hover {
+            background: var(--accent-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--accent);
+            border: 2px solid var(--accent);
+        }
+
+        .btn-outline:hover {
+            background: var(--accent);
+            color: white;
+        }
 
         /* Section Container */
-        section {
-            position: relative;
+        .container {
             max-width: 1200px;
-            margin: 5rem auto;
-            padding: 2rem;
-            z-index: 1;
-            /* ensure sections are visible when targeted (offset for fixed nav) */
-            scroll-margin-top: 100px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
         }
 
         .section-title {
             font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
             text-align: center;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-gray);
             margin-bottom: 3rem;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-size: 1.1rem;
         }
 
-        /* Cards */
-        .card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+        /* About Section */
+        .about-content {
+            background: var(--bg-white);
+            padding: 3rem;
             border-radius: 20px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(13, 110, 253, 0.3);
+            box-shadow: 0 10px 30px var(--shadow);
+            font-size: 1.2rem;
+            line-height: 1.8;
         }
 
         /* Skills Grid */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-            gap: 2rem;
-            text-align: center;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 1.5rem;
         }
 
-        .skill-item {
-            padding: 1.5rem;
-            background: rgba(255, 255, 255, 0.05);
+        .skill-card {
+            background: var(--bg-white);
+            padding: 2rem 1rem;
             border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px var(--shadow);
             transition: all 0.3s;
+            border: 2px solid transparent;
         }
 
-        .skill-item:hover {
-            background: rgba(13, 110, 253, 0.2);
-            transform: scale(1.1);
+        .skill-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent);
+            box-shadow: 0 10px 25px rgba(255, 107, 107, 0.2);
         }
 
         .skill-icon {
@@ -231,124 +211,306 @@
             margin-bottom: 0.5rem;
         }
 
+        .skill-name {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        /* Experience & Projects Cards */
+        .card {
+            background: var(--bg-white);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px var(--shadow);
+            margin-bottom: 2rem;
+            transition: all 0.3s;
+            border-left: 4px solid var(--accent);
+        }
+
+        .card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 15px 40px rgba(255, 107, 107, 0.15);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .card-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .card-meta {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        .card-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .card-list li {
+            padding: 0.75rem 0;
+            padding-left: 2rem;
+            position: relative;
+            color: var(--text-gray);
+        }
+
+        .card-list li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
         /* Projects Grid */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
         }
 
         .project-card {
-            background: linear-gradient(135deg, rgba(13, 110, 253, 0.1), rgba(111, 66, 193, 0.1));
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: var(--bg-white);
+            padding: 2.5rem;
             border-radius: 20px;
-            padding: 2rem;
-            transition: transform 0.3s;
+            box-shadow: 0 10px 30px var(--shadow);
+            transition: all 0.3s;
         }
 
         .project-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(111, 66, 193, 0.3);
+            box-shadow: 0 20px 40px rgba(255, 107, 107, 0.2);
         }
 
-        .project-card h3 {
-            color: var(--accent);
-            margin-bottom: 1rem;
-        }
-
-        .tech-stack {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 1rem;
-        }
-
-        .tech-tag {
-            padding: 0.3rem 0.8rem;
-            background: rgba(13, 110, 253, 0.3);
-            border-radius: 20px;
-            font-size: 0.85rem;
-        }
-
-        /* Timeline */
-        .timeline {
-            position: relative;
-            padding-left: 2rem;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            height: 100%;
-            width: 2px;
-            background: linear-gradient(180deg, var(--primary), var(--secondary));
-        }
-
-        .timeline-item {
-            margin-bottom: 2rem;
-            position: relative;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -2.5rem;
-            top: 0;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: var(--accent);
-            box-shadow: 0 0 20px var(--accent);
-        }
-
-        /* Achievement Badges */
-        .achievements-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .achievement-badge {
-            background: linear-gradient(135deg, rgba(13, 110, 253, 0.2), rgba(111, 66, 193, 0.2));
-            padding: 1.5rem;
-            border-radius: 15px;
-            text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .badge-icon {
+        .project-icon {
             font-size: 3rem;
             margin-bottom: 1rem;
         }
 
-        /* Table */
-        table {
+        .project-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .project-desc {
+            color: var(--text-gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tech-tag {
+            padding: 0.4rem 1rem;
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            color: white;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* Education Table */
+        .edu-table {
             width: 100%;
-            border-collapse: collapse;
-            margin: 2rem 0;
+            background: var(--bg-white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px var(--shadow);
         }
 
-        th, td {
-            padding: 1rem;
+        .edu-table th,
+        .edu-table td {
+            padding: 1.5rem;
             text-align: left;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        th {
-            background: rgba(13, 110, 253, 0.2);
+        .edu-table th {
+            background: var(--accent);
+            color: white;
+            font-weight: 600;
+        }
+
+        .edu-table tr {
+            border-bottom: 1px solid var(--border);
+        }
+
+        .edu-table tr:last-child {
+            border-bottom: none;
+        }
+
+        .edu-table tr:hover {
+            background: rgba(255, 107, 107, 0.05);
+        }
+
+        /* Certifications */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .cert-card {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px var(--shadow);
+            border-top: 4px solid var(--accent);
+            transition: all 0.3s;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255, 107, 107, 0.2);
+        }
+
+        .cert-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .cert-issuer {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        /* Achievements */
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .achievement-card {
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            padding: 2.5rem;
+            border-radius: 20px;
+            color: white;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
+            transition: all 0.3s;
+        }
+
+        .achievement-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(255, 107, 107, 0.4);
+        }
+
+        .achievement-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .achievement-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .achievement-desc {
+            opacity: 0.9;
+        }
+
+        /* Footer CTA */
+        .footer-cta {
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            border-radius: 30px;
+            margin: 4rem 0;
+        }
+
+        .footer-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-cta p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        /* Social Links */
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .social-btn {
+            width: 50px;
+            height: 50px;
+            background: white;
             color: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .social-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
         }
 
         /* Footer */
         footer {
             text-align: center;
-            padding: 3rem 2rem;
-            background: rgba(0, 0, 0, 0.3);
-            margin-top: 5rem;
+            padding: 2rem;
+            color: var(--text-gray);
         }
 
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .projects-grid,
+            .cert-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animations */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -360,119 +522,146 @@
             }
         }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            h1 { font-size: 2rem; }
-            .subtitle { font-size: 1.2rem; }
-            .section-title { font-size: 2rem; }
-            nav ul { gap: 1rem; }
+        section {
+            animation: fadeInUp 0.8s ease-out;
         }
     </style>
 </head>
 <body>
-    <!-- Animated Background -->
-    <div class="bg-animation" id="bgAnimation"></div>
-
-    <!-- Navigation -->
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#internship">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#achievements">Achievements</a></li>
-        </ul>
-    </nav>
+    <!-- Header -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">DP</div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <!-- Hero Section -->
-    <div class="hero">
-        <div class="hero-content">
-            <h1>Dhruv Manohar Patel</h1>
-            <p class="subtitle">Full Stack .NET Developer | Backend Specialist | MCA Graduate</p>
-            <div class="social-links">
-                <a href="https://linkedin.com/in/dhruvpateltural" class="social-btn linkedin" target="_blank">LinkedIn</a>
-                <a href="https://github.com/dhruvpateltural" class="social-btn github" target="_blank">GitHub</a>
-                <a href="mailto:dhruvpateltural@gmail.com" class="social-btn email">Email Me</a>
-            </div>
+    <section class="hero">
+        <h1>Hi, I'm <span class="gradient-text">Dhruv Manohar Patel</span></h1>
+        <p>Full Stack .NET Developer | Backend Specialist | MCA Graduate</p>
+        <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <a href="mailto:dhruvpateltural@gmail.com" class="btn btn-outline">Get In Touch</a>
         </div>
-    </div>
+        <div class="social-links">
+            <a href="https://linkedin.com/in/dhruvpateltural" class="social-btn" target="_blank">💼</a>
+            <a href="https://github.com/dhruvpateltural" class="social-btn" target="_blank">🔗</a>
+            <a href="mailto:dhruvpateltural@gmail.com" class="social-btn">✉️</a>
+        </div>
+    </section>
 
     <!-- About Section -->
-    <section id="about">
+    <section id="about" class="container">
         <h2 class="section-title">About Me</h2>
-        <div class="card">
-            <p style="font-size: 1.2rem; line-height: 1.8;">
-                MCA graduate with hands-on experience in <strong>full-stack development</strong>, specializing in the 
-                <strong>C#, ASP.NET, SQL Server, and Entity Framework</strong> stack. I focus on building 
-                <strong>secure, scalable applications</strong>, optimizing <strong>database performance</strong>, 
-                and working in <strong>Agile SDLC environments</strong>.
-            </p>
+        <p class="section-subtitle">Passionate developer focused on creating impactful solutions</p>
+        <div class="about-content">
+            MCA graduate with hands-on experience in <strong>full-stack development</strong>, specializing in the 
+            <strong>C#, ASP.NET, SQL Server, and Entity Framework</strong> stack. I focus on building 
+            <strong>secure, scalable applications</strong>, optimizing <strong>database performance</strong>, 
+            and working in <strong>Agile SDLC environments</strong>.
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills">
+    <section id="skills" class="container">
         <h2 class="section-title">Tech Stack</h2>
+        <p class="section-subtitle">Technologies I work with</p>
         <div class="skills-grid">
-            <div class="skill-item">
+            <div class="skill-card">
                 <div class="skill-icon">💻</div>
-                <div>C#</div>
+                <div class="skill-name">C#</div>
             </div>
-            <div class="skill-item">
+            <div class="skill-card">
                 <div class="skill-icon">🌐</div>
-                <div>.NET</div>
+                <div class="skill-name">.NET</div>
             </div>
-            <div class="skill-item">
+            <div class="skill-card">
+                <div class="skill-icon">🔷</div>
+                <div class="skill-name">ASP.NET</div>
+            </div>
+            <div class="skill-card">
                 <div class="skill-icon">☕</div>
-                <div>Java</div>
+                <div class="skill-name">Java</div>
             </div>
-            <div class="skill-item">
+            <div class="skill-card">
                 <div class="skill-icon">🗄️</div>
-                <div>SQL Server</div>
+                <div class="skill-name">SQL Server</div>
             </div>
-            <div class="skill-item">
+            <div class="skill-card">
                 <div class="skill-icon">📊</div>
-                <div>Entity Framework</div>
+                <div class="skill-name">Entity Framework</div>
             </div>
-            <div class="skill-item">
+            <div class="skill-card">
                 <div class="skill-icon">🎨</div>
-                <div>HTML/CSS</div>
+                <div class="skill-name">HTML/CSS</div>
             </div>
-            <div class="skill-item">
+            <div class="skill-card">
                 <div class="skill-icon">⚡</div>
-                <div>JavaScript</div>
+                <div class="skill-name">JavaScript</div>
             </div>
-            <div class="skill-item">
+            <div class="skill-card">
                 <div class="skill-icon">🔧</div>
-                <div>Git</div>
+                <div class="skill-name">Git</div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">🐱</div>
+                <div class="skill-name">GitHub</div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">🖥️</div>
+                <div class="skill-name">Visual Studio</div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">🐬</div>
+                <div class="skill-name">MySQL</div>
             </div>
         </div>
     </section>
 
-    <!-- Internship Section -->
-    <section id="internship">
+    <!-- Experience Section -->
+    <section id="experience" class="container">
         <h2 class="section-title">Experience</h2>
+        <p class="section-subtitle">My professional journey</p>
         <div class="card">
-            <h3 style="color: var(--accent); font-size: 1.8rem;">🚀 Software Development Intern</h3>
-            <p style="color: #888; margin: 0.5rem 0;"><strong>Aaryak Solutions</strong> | Jan 2025 – Jun 2025</p>
-            <ul style="margin-top: 1rem; line-height: 2;">
-                <li>✅ Developed <strong>10+ backend modules</strong></li>
-                <li>✅ Improved <strong>SQL performance by 20–30%</strong></li>
-                <li>✅ Implemented <strong>RBAC security system</strong></li>
-                <li>✅ Worked in full <strong>Agile SDLC lifecycle</strong></li>
+            <div class="card-header">
+                <div>
+                    <h3 class="card-title">🚀 Software Development Intern</h3>
+                    <p class="card-meta">Aaryak Solutions</p>
+                </div>
+                <div class="card-meta">Jan 2025 – Jun 2025</div>
+            </div>
+            <ul class="card-list">
+                <li>Developed <strong>10+ backend modules</strong> using C# and ASP.NET</li>
+                <li>Improved <strong>SQL performance by 20–30%</strong> through query optimization</li>
+                <li>Implemented <strong>RBAC security system</strong> for role-based access control</li>
+                <li>Worked in full <strong>Agile SDLC lifecycle</strong> with sprint planning</li>
             </ul>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects">
-        <h2 class="section-title">Projects</h2>
+    <section id="projects" class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">Some of my recent work</p>
         <div class="projects-grid">
             <div class="project-card">
-                <h3>🍽️ Restaurant Management System</h3>
-                <p>Complete billing, orders, and inventory management with secure RBAC authentication and optimized performance APIs.</p>
-                <div class="tech-stack">
+                <div class="project-icon">🍽️</div>
+                <h3 class="project-title">Restaurant Management System</h3>
+                <p class="project-desc">
+                    Complete billing, orders, and inventory management with secure RBAC authentication 
+                    and optimized performance APIs.
+                </p>
+                <div class="tech-tags">
                     <span class="tech-tag">C#</span>
                     <span class="tech-tag">ASP.NET</span>
                     <span class="tech-tag">SQL Server</span>
@@ -481,9 +670,13 @@
                 </div>
             </div>
             <div class="project-card">
-                <h3>🔧 Hardware Shop Management System</h3>
-                <p>Sales and inventory automation with ORM-based reliable data handling using modern desktop technologies.</p>
-                <div class="tech-stack">
+                <div class="project-icon">🔧</div>
+                <h3 class="project-title">Hardware Shop Management</h3>
+                <p class="project-desc">
+                    Sales and inventory automation with ORM-based reliable data handling using 
+                    modern desktop technologies.
+                </p>
+                <div class="tech-tags">
                     <span class="tech-tag">WinForms</span>
                     <span class="tech-tag">C#</span>
                     <span class="tech-tag">SQL Server</span>
@@ -494,128 +687,127 @@
     </section>
 
     <!-- Education Section -->
-    <section id="education">
+    <section id="education" class="container">
         <h2 class="section-title">Education</h2>
-        <div class="card">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Degree</th>
-                        <th>Institution</th>
-                        <th>Year</th>
-                        <th>CGPA</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>MCA</strong></td>
-                        <td>Finolex Academy</td>
-                        <td>2025</td>
-                        <td><strong style="color: var(--accent);">8.4</strong></td>
-                    </tr>
-                    <tr>
-                        <td><strong>B.Com</strong></td>
-                        <td>Gogate Jogalekar College</td>
-                        <td>2023</td>
-                        <td><strong style="color: var(--accent);">8.78</strong></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        <p class="section-subtitle">My academic background</p>
+        <table class="edu-table">
+            <thead>
+                <tr>
+                    <th>Degree</th>
+                    <th>Institution</th>
+                    <th>Year</th>
+                    <th>CGPA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>MCA</strong></td>
+                    <td>Finolex Academy</td>
+                    <td>2025</td>
+                    <td><strong>8.4</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>B.Com</strong></td>
+                    <td>Gogate Jogalekar College</td>
+                    <td>2023</td>
+                    <td><strong>8.78</strong></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
 
-        <h2 class="section-title" style="margin-top: 4rem;">Certifications</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="card">
-                    <h4>Java Programming Fundamentals</h4>
-                    <p style="color: #888;">SpringBoard</p>
-                </div>
+    <!-- Certifications -->
+    <section class="container">
+        <h2 class="section-title">Certifications</h2>
+        <p class="section-subtitle">Professional credentials</p>
+        <div class="cert-grid">
+            <div class="cert-card">
+                <h4 class="cert-title">Java Programming Fundamentals</h4>
+                <p class="cert-issuer">SpringBoard</p>
             </div>
-            <div class="timeline-item">
-                <div class="card">
-                    <h4>Cyber Security & Privacy Fundamentals</h4>
-                    <p style="color: #888;">NPTEL</p>
-                </div>
+            <div class="cert-card">
+                <h4 class="cert-title">Cyber Security & Privacy Fundamentals</h4>
+                <p class="cert-issuer">NPTEL</p>
             </div>
-            <div class="timeline-item">
-                <div class="card">
-                    <h4>Web Development Fundamentals</h4>
-                    <p style="color: #888;">IBM</p>
-                </div>
+            <div class="cert-card">
+                <h4 class="cert-title">Web Development Fundamentals</h4>
+                <p class="cert-issuer">IBM</p>
             </div>
         </div>
     </section>
 
-    <!-- Achievements Section -->
-    <section id="achievements">
+    <!-- Achievements -->
+    <section class="container">
         <h2 class="section-title">Achievements & Leadership</h2>
+        <p class="section-subtitle">Making an impact beyond code</p>
         <div class="achievements-grid">
-            <div class="achievement-badge">
-                <div class="badge-icon">🏅</div>
-                <h4>Marketing Lead</h4>
-                <p>Excellentia 2K25</p>
+            <div class="achievement-card">
+                <div class="achievement-icon">🏅</div>
+                <h3 class="achievement-title">Marketing Lead</h3>
+                <p class="achievement-desc">Excellentia 2K25</p>
             </div>
-            <div class="achievement-badge">
-                <div class="badge-icon">📸</div>
-                <h4>Photography & Videography</h4>
-                <p>Finolex MCA Department</p>
+            <div class="achievement-card">
+                <div class="achievement-icon">📸</div>
+                <h3 class="achievement-title">Photography & Videography</h3>
+                <p class="achievement-desc">Finolex MCA Department</p>
             </div>
-            <div class="achievement-badge">
-                <div class="badge-icon">🧩</div>
-                <h4>Problem Solving</h4>
-                <p>Analytical Thinking</p>
+            <div class="achievement-card">
+                <div class="achievement-icon">🧩</div>
+                <h3 class="achievement-title">Problem Solver</h3>
+                <p class="achievement-desc">Analytical Thinking Expert</p>
             </div>
-            <div class="achievement-badge">
-                <div class="badge-icon">🤝</div>
-                <h4>Agile Collaboration</h4>
-                <p>Team Player</p>
+            <div class="achievement-card">
+                <div class="achievement-icon">🤝</div>
+                <h3 class="achievement-title">Team Player</h3>
+                <p class="achievement-desc">Agile Collaboration</p>
             </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section id="contact" class="container">
+        <div class="footer-cta">
+            <h2>🚀 Career Objective</h2>
+            <p>
+                To work as a <strong>Full Stack .NET Developer</strong> in building secure, scalable, 
+                and high-performance enterprise applications.
+            </p>
+            <a href="mailto:dhruvpateltural@gmail.com" class="btn" style="background: white; color: var(--accent);">Let's Work Together</a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <h3 style="margin-bottom: 1rem;">🚀 Career Objective</h3>
-        <p style="font-size: 1.1rem; max-width: 800px; margin: 0 auto; line-height: 1.8;">
-            To work as a <strong>Full Stack .NET Developer</strong> in building <strong>secure, scalable, 
-            and high-performance enterprise applications</strong>.
-        </p>
-        <p style="margin-top: 2rem; color: #888;">
-            ⭐ If you like my work, consider starring my repositories and connecting with me!
-        </p>
+        <p>© 2025 Dhruv Manohar Patel. Built with passion and .NET</p>
     </footer>
 
     <script>
-        // Create animated background particles
-        const bgAnimation = document.getElementById('bgAnimation');
-        for (let i = 0; i < 50; i++) {
-            const span = document.createElement('span');
-            span.style.left = Math.random() * 100 + '%';
-            span.style.animationDelay = Math.random() * 15 + 's';
-            span.style.animationDuration = (Math.random() * 10 + 10) + 's';
-            bgAnimation.appendChild(span);
-        }
-
-        // Smooth scroll for navigation
-        document.querySelectorAll('nav a').forEach(anchor => {
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
             });
         });
 
-        // Intersection Observer for fade-in animations
+        // Scroll animation
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.style.animation = 'fadeInUp 0.8s ease-out';
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
                 }
             });
         }, { threshold: 0.1 });
 
-        document.querySelectorAll('.card, .project-card, .achievement-badge').forEach(el => {
-            observer.observe(el);
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'all 0.6s ease-out';
+            observer.observe(section);
         });
     </script>
 </body>
