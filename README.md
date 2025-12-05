@@ -1,5 +1,5 @@
+<!DOCTYPE html>
 
-<html lang="en">
 <head>
     <meta charset="UTF-8" />
     <title>Dhruv Manohar Patel | Full Stack .NET Developer</title>
@@ -347,9 +347,7 @@
                         <li>Sales & Inventory Automation</li>
                         <li>ORM-based Reliable Data Handling</li>
                     </ul>
-                </div>
-
-               
+                </div>      
         </section>
 
         <!-- EDUCATION -->
