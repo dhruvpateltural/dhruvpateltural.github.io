@@ -1,20 +1,23 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Dhruv Manohar Patel | Full Stack .NET Developer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Dhruv Manohar Patel - Full Stack .NET Developer, Backend Specialist, MCA Graduate"/>
-  <link rel="icon" href="https://avatars.githubusercontent.com/u/0?v=4"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dhruv Manohar Patel - Full Stack .NET Developer, Backend Specialist, MCA Graduate">
+  <link rel="icon" href="https://avatars.githubusercontent.com/u/0?v=4">
 
-  <!-- FONT AWESOME ICONS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
     :root {
       --primary: #0d6efd;
-      --dark: #111;
-      --light: #f9f9f9;
-      --text: #333;
+      --primary-dark: #084298;
+      --light: #f4f8ff;
+      --dark: #0a2540;
+      --text: #1f2933;
+      --card-bg: #ffffff;
     }
 
     * {
@@ -25,8 +28,8 @@
     }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      background: var(--light);
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background: linear-gradient(180deg, #f4f8ff, #ffffff);
       color: var(--text);
       line-height: 1.6;
     }
@@ -34,13 +37,13 @@
     a {
       text-decoration: none;
       color: var(--primary);
-      font-weight: 500;
+      font-weight: 600;
     }
 
     section {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: auto;
-      padding: 70px 20px;
+      padding: 90px 20px;
     }
 
     h1, h2, h3 {
@@ -49,31 +52,44 @@
     }
 
     h2 {
-      font-size: 2rem;
-      margin-bottom: 25px;
+      font-size: 2.2rem;
+      margin-bottom: 35px;
+      font-weight: 800;
     }
 
     /* HERO */
     .hero {
       text-align: center;
-      padding: 100px 20px 70px;
-      background: white;
+      padding: 120px 20px 80px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: white;
     }
 
     .hero img {
       border-radius: 50%;
-      border: 4px solid var(--primary);
-      width: 140px;
+      border: 4px solid white;
+      width: 150px;
       margin-bottom: 15px;
     }
 
     .hero h1 {
-      font-size: 2.4rem;
+      font-size: 2.8rem;
+      color: white;
     }
 
     .hero h3 {
       font-weight: 500;
-      color: #555;
+      opacity: 0.9;
+    }
+
+    .socials {
+      margin-top: 20px;
+    }
+
+    .socials a {
+      margin: 0 10px;
+      color: white;
+      font-size: 22px;
     }
 
     /* NAVBAR */
@@ -83,45 +99,33 @@
       position: sticky;
       top: 0;
       background: white;
-      border-bottom: 1px solid #eee;
+      border-bottom: 1px solid #e5e7eb;
       z-index: 100;
     }
 
     .navbar a {
       margin: 0 10px;
       font-size: 15px;
+      color: var(--primary);
     }
 
     .navbar i {
       margin-right: 5px;
     }
 
-    /* SOCIALS */
-    .socials {
-      margin-top: 20px;
-      text-align: center;
-    }
-
-    .socials a {
-      margin: 0 6px;
-      font-size: 22px;
-    }
-
-    /* SKILLS */
-    .skills img {
-      width: 60%;
-      max-width: 400px;
-      margin-top: 10px;
-    }
-
-    /* UNIFIED CARD STYLE */
+    /* UNIFIED CARD */
     .section-card {
-      background: white;
-      padding: 20px;
-      margin-bottom: 20px;
+      background: var(--card-bg);
+      padding: 25px;
+      margin-bottom: 25px;
       border-radius: 14px;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.05);
-      border-left: 4px solid var(--primary);
+      box-shadow: 0 10px 25px rgba(13,110,253,0.12);
+      border-left: 5px solid var(--primary);
+      transition: transform 0.25s ease;
+    }
+
+    .section-card:hover {
+      transform: translateY(-4px);
     }
 
     .section-card h3 i {
@@ -129,20 +133,38 @@
       margin-right: 6px;
     }
 
+    /* SKILLS */
+    .skills img {
+      width: 65%;
+      max-width: 420px;
+    }
+
+    /* LISTS */
+    ul {
+      padding-left: 20px;
+      margin-top: 10px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
     /* FOOTER */
     footer {
       text-align: center;
-      padding: 40px 20px;
+      padding: 50px 20px;
       font-size: 14px;
-      color: #666;
+      color: #475569;
+      background: #f1f5ff;
+      border-top: 1px solid #dbeafe;
     }
 
     @media (max-width: 768px) {
       .hero h1 {
-        font-size: 2rem;
+        font-size: 2.1rem;
       }
       .skills img {
-        width: 90%;
+        width: 95%;
       }
     }
   </style>
@@ -152,44 +174,42 @@
 
   <!-- HERO -->
   <div class="hero" id="home">
-    <img src="https://avatars.githubusercontent.com/u/0?v=4" alt="Dhruv Patel">
+    <img src="https://avatars.githubusercontent.com/u/0?v=4">
     <h1><i class="fa-solid fa-user"></i> Dhruv Manohar Patel</h1>
     <h3>Full Stack .NET Developer • Backend Specialist • MCA Graduate</h3>
 
     <div class="socials">
-      <a href="https://linkedin.com/in/dhruvpateltural" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="https://github.com/dhruvpateltural" target="_blank"><i class="fa-brands fa-github"></i></a>
+      <a href="https://linkedin.com/in/dhruvpateltural"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/dhruvpateltural"><i class="fab fa-github"></i></a>
       <a href="mailto:dhruvpateltural@gmail.com"><i class="fa-solid fa-envelope"></i></a>
     </div>
   </div>
 
   <!-- NAVBAR -->
   <div class="navbar">
-    <a href="#about"><i class="fa-solid fa-user"></i>About</a>
-    <a href="#skills"><i class="fa-solid fa-code"></i>Skills</a>
-    <a href="#internship"><i class="fa-solid fa-briefcase"></i>Internship</a>
-    <a href="#projects"><i class="fa-solid fa-diagram-project"></i>Projects</a>
-    <a href="#education"><i class="fa-solid fa-graduation-cap"></i>Education</a>
-    <a href="#certifications"><i class="fa-solid fa-certificate"></i>Certifications</a>
-    <a href="#achievements"><i class="fa-solid fa-trophy"></i>Achievements</a>
+    <a href="#about"><i class="fa-user"></i>About</a>
+    <a href="#skills"><i class="fa-code"></i>Skills</a>
+    <a href="#internship"><i class="fa-briefcase"></i>Internship</a>
+    <a href="#projects"><i class="fa-diagram-project"></i>Projects</a>
+    <a href="#education"><i class="fa-graduation-cap"></i>Education</a>
+    <a href="#certifications"><i class="fa-certificate"></i>Certifications</a>
+    <a href="#achievements"><i class="fa-trophy"></i>Achievements</a>
   </div>
 
   <!-- ABOUT -->
   <section id="about">
-    <h2><i class="fa-solid fa-user"></i> About Me</h2>
+    <h2><i class="fa-user"></i> About Me</h2>
     <div class="section-card">
-      <p>
-        MCA graduate with hands-on experience in <strong>full-stack development</strong>,
-        specializing in <strong>C#, ASP.NET, SQL Server, and Entity Framework</strong>.
-        I build <strong>secure, scalable backend systems</strong>, optimize databases,
-        and work efficiently in <strong>Agile SDLC environments</strong>.
-      </p>
+      MCA graduate with <b>full-stack development</b> experience using  
+      <b>C#, ASP.NET, SQL Server & Entity Framework</b>.  
+      I build <b>secure, scalable backend systems</b>, optimize databases,  
+      and work efficiently in <b>Agile SDLC environments</b>.
     </div>
   </section>
 
   <!-- SKILLS -->
   <section id="skills" class="skills">
-    <h2><i class="fa-solid fa-code"></i> Tech Stack</h2>
+    <h2><i class="fa-code"></i> Tech Stack</h2>
     <div class="section-card" style="text-align:center;">
       <img src="https://skillicons.dev/icons?i=cs,dotnet,java,html,css,js,git,github,visualstudio,mysql">
     </div>
@@ -197,27 +217,26 @@
 
   <!-- INTERNSHIP -->
   <section id="internship">
-    <h2><i class="fa-solid fa-briefcase"></i> Internship</h2>
-
+    <h2><i class="fa-briefcase"></i> Internship</h2>
     <div class="section-card">
-      <h3><i class="fa-solid fa-building"></i> Software Development Intern — Aaryak Solutions</h3>
-      <p><strong>Jan 2025 – Jun 2025</strong></p>
+      <h3><i class="fa-building"></i> Software Development Intern — Aaryak Solutions</h3>
+      <p><b>Jan 2025 – Jun 2025</b></p>
       <ul>
         <li>Developed 10+ backend modules</li>
         <li>Improved SQL performance by 20–30%</li>
-        <li>Implemented RBAC-based authentication</li>
-        <li>Worked across full Agile SDLC lifecycle</li>
+        <li>Implemented RBAC-based security</li>
+        <li>Worked in Agile SDLC lifecycle</li>
       </ul>
     </div>
   </section>
 
   <!-- PROJECTS -->
   <section id="projects">
-    <h2><i class="fa-solid fa-diagram-project"></i> Projects</h2>
+    <h2><i class="fa-diagram-project"></i> Projects</h2>
 
     <div class="section-card">
-      <h3><i class="fa-solid fa-utensils"></i> Restaurant Management System</h3>
-      <p><strong>Tech:</strong> C#, ASP.NET, SQL Server, Entity Framework, HTML, CSS</p>
+      <h3><i class="fa-utensils"></i> Restaurant Management System</h3>
+      <p><b>Tech:</b> C#, ASP.NET, SQL Server, EF, HTML, CSS</p>
       <ul>
         <li>Billing, Orders & Inventory Automation</li>
         <li>Secure Role-Based Authentication</li>
@@ -226,8 +245,8 @@
     </div>
 
     <div class="section-card">
-      <h3><i class="fa-solid fa-gears"></i> Hardware Shop Management System</h3>
-      <p><strong>Tech:</strong> WinForms, C#, SQL Server, Entity Framework</p>
+      <h3><i class="fa-gears"></i> Hardware Shop Management System</h3>
+      <p><b>Tech:</b> WinForms, C#, SQL Server, EF</p>
       <ul>
         <li>Sales & Inventory Automation</li>
         <li>ORM-based Reliable Data Handling</li>
@@ -237,24 +256,24 @@
 
   <!-- EDUCATION -->
   <section id="education">
-    <h2><i class="fa-solid fa-graduation-cap"></i> Education</h2>
+    <h2><i class="fa-graduation-cap"></i> Education</h2>
 
     <div class="section-card">
-      <h3>Master of Computer Applications (MCA)</h3>
-      <p>Finolex Academy — 2025</p>
-      <p><strong>CGPA:</strong> 8.4</p>
+      <h3>MCA — Finolex Academy</h3>
+      <p>2025</p>
+      <b>CGPA: 8.4</b>
     </div>
 
     <div class="section-card">
-      <h3>Bachelor of Commerce (B.Com)</h3>
-      <p>Gogate Jogalekar College — 2023</p>
-      <p><strong>CGPA:</strong> 8.78</p>
+      <h3>B.Com — Gogate Jogalekar College</h3>
+      <p>2023</p>
+      <b>CGPA: 8.78</b>
     </div>
   </section>
 
   <!-- CERTIFICATIONS -->
   <section id="certifications">
-    <h2><i class="fa-solid fa-certificate"></i> Certifications</h2>
+    <h2><i class="fa-certificate"></i> Certifications</h2>
     <div class="section-card">
       <ul>
         <li>Java Programming Fundamentals — SpringBoard</li>
@@ -266,17 +285,16 @@
 
   <!-- ACHIEVEMENTS -->
   <section id="achievements">
-    <h2><i class="fa-solid fa-trophy"></i> Achievements</h2>
+    <h2><i class="fa-trophy"></i> Achievements</h2>
 
     <div class="section-card">
       <ul>
-        <li><strong>Marketing Lead — Excellentia 2K25</strong></li>
-        <li><strong>Photography & Videography Coordinator — Finolex MCA Dept</strong></li>
+        <li>Marketing Lead — Excellentia 2K25</li>
+        <li>Photography & Videography Coordinator — Finolex MCA Dept</li>
       </ul>
     </div>
 
     <h3 style="margin-top:20px;">Core Strengths</h3>
-
     <div class="section-card">
       <ul>
         <li>Problem Solving</li>
@@ -289,7 +307,7 @@
 
   <!-- FOOTER -->
   <footer>
-    ⭐ If you like my work, consider starring my repositories and connecting with me.  
+    ⭐ If you like my work, consider starring my repositories and connecting with me.
     <br><br>
     © 2025 Dhruv Manohar Patel
   </footer>
