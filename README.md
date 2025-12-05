@@ -41,7 +41,7 @@
         }
 
         a{color:var(--primary);text-decoration:none}
-        section{max-width:1100px;margin:45px auto;padding:0 20px}
+        .section{max-width:1100px;margin:45px auto;padding:0 20px}
         h1,h2,h3{color:var(--text);margin-bottom:8px}
         h2{font-size:1.9rem;font-weight:800;display:flex;align-items:center;gap:.6rem}
         h3{font-size:1.05rem}
@@ -192,7 +192,7 @@
         /* Lists and typography */
         ul{padding-left:18px;margin-top:8px}
         li{margin-bottom:8px;color:var(--muted);font-weight:500}
-        p{color:var(--muted);margin-top:8px}
+        p{color:var(--muted);Margin-top:8px}
 
         /* Projects grid */
         .projects-grid{
@@ -237,7 +237,7 @@
             .avatar{width:100px;height:100px}
             .hero-info h1{font-size:1.3rem}
             .hero-info h3{font-size:.94rem}
-            section{padding:0 14px}
+            .section{padding:0 14px}
             .nav-links a{padding:8px}
         }
     </style>
@@ -288,7 +288,7 @@
         </header>
 
         <!-- ABOUT -->
-        <section id="about" class="fade-up" aria-labelledby="about-heading">
+        <div id="about" class="section fade-up" aria-labelledby="about-heading" role="region"></div>
             <h2 id="about-heading"><i class="fa-solid fa-user"></i> About Me</h2>
             <div class="section-card" style="margin-top:12px">
                 <p style="font-weight:600;color:var(--text)"></p>
@@ -298,19 +298,19 @@
                     and work efficiently in <strong>Agile SDLC environments</strong>.
                 </p>
             </div>
-        </section>
+        </div>
 
         <!-- SKILLS -->
-        <section id="skills" class="skills fade-up" aria-labelledby="skills-heading">
+        <div id="skills" class="skills section fade-up" aria-labelledby="skills-heading" role="region"></div>
             <h2 id="skills-heading"><i class="fa-solid fa-code"></i> Tech Stack</h2>
             <div class="section-card" style="margin-top:12px;text-align:center">
                 <img src="https://skillicons.dev/icons?i=cs,dotnet,java,html,css,js,git,github,visualstudio,mysql" alt="tech stack icons">
                 <p style="margin-top:10px;color:var(--muted)">C#, .NET, SQL Server, EF, ASP.NET, WinForms, HTML/CSS/JS and tooling (Git, VS)</p>
             </div>
-        </section>
+        </div>
 
         <!-- INTERNSHIP -->
-        <section id="internship" class="fade-up" aria-labelledby="internship-heading">
+        <div id="internship" class="section fade-up" aria-labelledby="internship-heading" role="region"></div>
             <h2 id="internship-heading"><i class="fa-solid fa-briefcase"></i> Internship</h2>
             <div class="section-card" style="margin-top:12px">
                 <h3><i class="fa-solid fa-building"></i> Software Development Intern — Aaryak Solutions</h3>
@@ -322,10 +322,10 @@
                     <li>Collaborated in Agile SDLC</li>
                 </ul>
             </div>
-        </section>
+        </div>
 
         <!-- PROJECTS -->
-        <section id="projects" class="fade-up" aria-labelledby="projects-heading">
+        <div id="projects" class="section fade-up" aria-labelledby="projects-heading" role="region"></div>
             <h2 id="projects-heading"><i class="fa-solid fa-diagram-project"></i> Projects</h2>
 
             <div class="projects-grid" style="margin-top:12px">
@@ -346,11 +346,12 @@
                         <li>Sales & Inventory Automation</li>
                         <li>ORM-based Reliable Data Handling</li>
                     </ul>
-                </div>      
-        </section>
+                </div>
+            </div>
+        </div>
 
         <!-- EDUCATION -->
-        <section id="education" class="fade-up" aria-labelledby="education-heading">
+        <div id="education" class="section fade-up" aria-labelledby="education-heading" role="region">
             <h2 id="education-heading"><i class="fa-solid fa-graduation-cap"></i> Education</h2>
 
             <div style="margin-top:12px;display:grid;grid-template-columns:repeat(2,1fr);gap:16px">
@@ -366,22 +367,22 @@
                     <strong>CGPA: 8.78</strong>
                 </div>
             </div>
-        </section>
+        </div>
 
         <!-- CERTIFICATIONS -->
-        <section id="certifications" class="fade-up" aria-labelledby="certifications-heading">
+        <div id="certifications" class="section fade-up" aria-labelledby="certifications-heading" role="region">
             <h2 id="certifications-heading"><i class="fa-solid fa-certificate"></i> Certifications</h2>
-            <div class="section-card" style="margin-top:12px">
+            <div class="section-card" style="margin-top:12px"></div>
                 <ul>
                     <li>Java Programming Fundamentals — SpringBoard</li>
                     <li>Cyber Security & Privacy Fundamentals — NPTEL</li>
                     <li>Web Development Fundamentals — IBM</li>
                 </ul>
             </div>
-        </section>
+        </div>
 
         <!-- ACHIEVEMENTS -->
-        <section id="achievements" class="fade-up" aria-labelledby="achievements-heading">
+        <div id="achievements" class="section fade-up" aria-labelledby="achievements-heading" role="region">
             <h2 id="achievements-heading"><i class="fa-solid fa-trophy"></i> Achievements</h2>
 
             <div class="section-card" style="margin-top:12px">
@@ -400,7 +401,7 @@
                     <li>Time Management</li>
                 </ul>
             </div>
-        </section>
+        </div>
 
         <!-- FOOTER -->
         <footer>
@@ -410,4 +411,4 @@
         </footer>
     </div>
 </body>
-</html></div>
+</html>
