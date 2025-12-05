@@ -401,7 +401,7 @@
                     <li>Time Management</li>
                 </ul>
             </div>
-        </div>
+     
 
         <!-- FOOTER -->
         <footer>
@@ -409,6 +409,6 @@
             <br><br>
             © 2025 Dhruv Manohar Patel
         </footer>
-    </div>
+ 
 </body>
 </html>
