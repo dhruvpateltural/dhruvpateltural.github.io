@@ -1,4 +1,3 @@
-
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -6,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Dhruv Manohar Patel - Full Stack .NET Developer, Backend Specialist, MCA Graduate"/>
   <link rel="icon" href="https://avatars.githubusercontent.com/u/0?v=4"/>
+
+  <!-- FONT AWESOME ICONS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
   <style>
     :root {
@@ -86,8 +88,12 @@
     }
 
     .navbar a {
-      margin: 0 8px;
+      margin: 0 10px;
       font-size: 15px;
+    }
+
+    .navbar i {
+      margin-right: 5px;
     }
 
     /* SOCIALS */
@@ -96,9 +102,9 @@
       text-align: center;
     }
 
-    .socials img {
-      margin: 6px;
-      height: 28px;
+    .socials a {
+      margin: 0 6px;
+      font-size: 22px;
     }
 
     /* SKILLS */
@@ -108,7 +114,7 @@
       margin-top: 10px;
     }
 
-    /* UNIFIED CARD STYLE (EDUCATION STYLE EVERYWHERE) */
+    /* UNIFIED CARD STYLE */
     .section-card {
       background: white;
       padding: 20px;
@@ -116,6 +122,11 @@
       border-radius: 14px;
       box-shadow: 0 6px 16px rgba(0,0,0,0.05);
       border-left: 4px solid var(--primary);
+    }
+
+    .section-card h3 i {
+      color: var(--primary);
+      margin-right: 6px;
     }
 
     /* FOOTER */
@@ -142,36 +153,30 @@
   <!-- HERO -->
   <div class="hero" id="home">
     <img src="https://avatars.githubusercontent.com/u/0?v=4" alt="Dhruv Patel">
-    <h1>Dhruv Manohar Patel</h1>
+    <h1><i class="fa-solid fa-user"></i> Dhruv Manohar Patel</h1>
     <h3>Full Stack .NET Developer • Backend Specialist • MCA Graduate</h3>
 
     <div class="socials">
-      <a href="https://linkedin.com/in/dhruvpateltural" target="_blank">
-        <img src="https://img.shields.io/badge/LinkedIn-0d6efd?style=flat&logo=linkedin&logoColor=white">
-      </a>
-      <a href="https://github.com/dhruvpateltural" target="_blank">
-        <img src="https://img.shields.io/badge/GitHub-111111?style=flat&logo=github&logoColor=white">
-      </a>
-      <a href="mailto:dhruvpateltural@gmail.com">
-        <img src="https://img.shields.io/badge/Email-0d6efd?style=flat&logo=gmail&logoColor=white">
-      </a>
+      <a href="https://linkedin.com/in/dhruvpateltural" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://github.com/dhruvpateltural" target="_blank"><i class="fa-brands fa-github"></i></a>
+      <a href="mailto:dhruvpateltural@gmail.com"><i class="fa-solid fa-envelope"></i></a>
     </div>
   </div>
 
   <!-- NAVBAR -->
   <div class="navbar">
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#internship">Internship</a>
-    <a href="#projects">Projects</a>
-    <a href="#education">Education</a>
-    <a href="#certifications">Certifications</a>
-    <a href="#achievements">Achievements</a>
+    <a href="#about"><i class="fa-solid fa-user"></i>About</a>
+    <a href="#skills"><i class="fa-solid fa-code"></i>Skills</a>
+    <a href="#internship"><i class="fa-solid fa-briefcase"></i>Internship</a>
+    <a href="#projects"><i class="fa-solid fa-diagram-project"></i>Projects</a>
+    <a href="#education"><i class="fa-solid fa-graduation-cap"></i>Education</a>
+    <a href="#certifications"><i class="fa-solid fa-certificate"></i>Certifications</a>
+    <a href="#achievements"><i class="fa-solid fa-trophy"></i>Achievements</a>
   </div>
 
   <!-- ABOUT -->
   <section id="about">
-    <h2>About Me</h2>
+    <h2><i class="fa-solid fa-user"></i> About Me</h2>
     <div class="section-card">
       <p>
         MCA graduate with hands-on experience in <strong>full-stack development</strong>,
@@ -184,7 +189,7 @@
 
   <!-- SKILLS -->
   <section id="skills" class="skills">
-    <h2>Tech Stack</h2>
+    <h2><i class="fa-solid fa-code"></i> Tech Stack</h2>
     <div class="section-card" style="text-align:center;">
       <img src="https://skillicons.dev/icons?i=cs,dotnet,java,html,css,js,git,github,visualstudio,mysql">
     </div>
@@ -192,10 +197,10 @@
 
   <!-- INTERNSHIP -->
   <section id="internship">
-    <h2>Internship</h2>
+    <h2><i class="fa-solid fa-briefcase"></i> Internship</h2>
 
     <div class="section-card">
-      <h3>Software Development Intern — Aaryak Solutions</h3>
+      <h3><i class="fa-solid fa-building"></i> Software Development Intern — Aaryak Solutions</h3>
       <p><strong>Jan 2025 – Jun 2025</strong></p>
       <ul>
         <li>Developed 10+ backend modules</li>
@@ -208,10 +213,10 @@
 
   <!-- PROJECTS -->
   <section id="projects">
-    <h2>Projects</h2>
+    <h2><i class="fa-solid fa-diagram-project"></i> Projects</h2>
 
     <div class="section-card">
-      <h3>Restaurant Management System</h3>
+      <h3><i class="fa-solid fa-utensils"></i> Restaurant Management System</h3>
       <p><strong>Tech:</strong> C#, ASP.NET, SQL Server, Entity Framework, HTML, CSS</p>
       <ul>
         <li>Billing, Orders & Inventory Automation</li>
@@ -221,7 +226,7 @@
     </div>
 
     <div class="section-card">
-      <h3>Hardware Shop Management System</h3>
+      <h3><i class="fa-solid fa-gears"></i> Hardware Shop Management System</h3>
       <p><strong>Tech:</strong> WinForms, C#, SQL Server, Entity Framework</p>
       <ul>
         <li>Sales & Inventory Automation</li>
@@ -232,7 +237,7 @@
 
   <!-- EDUCATION -->
   <section id="education">
-    <h2>Education</h2>
+    <h2><i class="fa-solid fa-graduation-cap"></i> Education</h2>
 
     <div class="section-card">
       <h3>Master of Computer Applications (MCA)</h3>
@@ -249,7 +254,7 @@
 
   <!-- CERTIFICATIONS -->
   <section id="certifications">
-    <h2>Certifications</h2>
+    <h2><i class="fa-solid fa-certificate"></i> Certifications</h2>
     <div class="section-card">
       <ul>
         <li>Java Programming Fundamentals — SpringBoard</li>
@@ -261,7 +266,7 @@
 
   <!-- ACHIEVEMENTS -->
   <section id="achievements">
-    <h2>Achievements</h2>
+    <h2><i class="fa-solid fa-trophy"></i> Achievements</h2>
 
     <div class="section-card">
       <ul>
