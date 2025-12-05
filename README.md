@@ -307,7 +307,7 @@
                 <img src="https://skillicons.dev/icons?i=cs,dotnet,java,html,css,js,git,github,visualstudio,mysql" alt="tech stack icons">
                 <p style="margin-top:10px;color:var(--muted)">C#, .NET, SQL Server, EF, ASP.NET, WinForms, HTML/CSS/JS and tooling (Git, VS)</p>
             </div>
-        </div>
+        
 
         <!-- INTERNSHIP -->
         <div id="internship" class="section fade-up" aria-labelledby="internship-heading" role="region"></div>
@@ -322,7 +322,7 @@
                     <li>Collaborated in Agile SDLC</li>
                 </ul>
             </div>
-        </div>
+   
 
         <!-- PROJECTS -->
         <div id="projects" class="section fade-up" aria-labelledby="projects-heading" role="region"></div>
@@ -348,7 +348,7 @@
                     </ul>
                 </div>
             </div>
-        </div>
+        
 
         <!-- EDUCATION -->
         <div id="education" class="section fade-up" aria-labelledby="education-heading" role="region">
@@ -379,7 +379,7 @@
                     <li>Web Development Fundamentals — IBM</li>
                 </ul>
             </div>
-        </div>
+       
 
         <!-- ACHIEVEMENTS -->
         <div id="achievements" class="section fade-up" aria-labelledby="achievements-heading" role="region">
