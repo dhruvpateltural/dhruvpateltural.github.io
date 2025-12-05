@@ -108,33 +108,14 @@
       margin-top: 10px;
     }
 
-    /* INTERNSHIP, PROJECTS */
-    .card {
-      background: white;
-      padding: 25px;
-      border-radius: 14px;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.05);
-      margin-bottom: 25px;
-    }
-
-    .card ul {
-      margin-top: 12px;
-      padding-left: 20px;
-    }
-
-    /* EDUCATION LIST */
-    .education-item {
+    /* UNIFIED CARD STYLE (EDUCATION STYLE EVERYWHERE) */
+    .section-card {
       background: white;
       padding: 20px;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
       border-radius: 14px;
       box-shadow: 0 6px 16px rgba(0,0,0,0.05);
       border-left: 4px solid var(--primary);
-    }
-
-    .education-item span {
-      color: var(--primary);
-      font-weight: 600;
     }
 
     /* FOOTER */
@@ -191,25 +172,29 @@
   <!-- ABOUT -->
   <section id="about">
     <h2>About Me</h2>
-    <p>
-      MCA graduate with hands-on experience in <strong>full-stack development</strong>,
-      specializing in <strong>C#, ASP.NET, SQL Server, and Entity Framework</strong>.
-      I build <strong>secure, scalable backend systems</strong>, optimize databases,
-      and work efficiently in <strong>Agile SDLC environments</strong>.
-    </p>
+    <div class="section-card">
+      <p>
+        MCA graduate with hands-on experience in <strong>full-stack development</strong>,
+        specializing in <strong>C#, ASP.NET, SQL Server, and Entity Framework</strong>.
+        I build <strong>secure, scalable backend systems</strong>, optimize databases,
+        and work efficiently in <strong>Agile SDLC environments</strong>.
+      </p>
+    </div>
   </section>
 
   <!-- SKILLS -->
   <section id="skills" class="skills">
     <h2>Tech Stack</h2>
-    <img src="https://skillicons.dev/icons?i=cs,dotnet,java,html,css,js,git,github,visualstudio,mysql">
+    <div class="section-card" style="text-align:center;">
+      <img src="https://skillicons.dev/icons?i=cs,dotnet,java,html,css,js,git,github,visualstudio,mysql">
+    </div>
   </section>
 
   <!-- INTERNSHIP -->
   <section id="internship">
     <h2>Internship</h2>
 
-    <div class="card">
+    <div class="section-card">
       <h3>Software Development Intern — Aaryak Solutions</h3>
       <p><strong>Jan 2025 – Jun 2025</strong></p>
       <ul>
@@ -225,7 +210,7 @@
   <section id="projects">
     <h2>Projects</h2>
 
-    <div class="card">
+    <div class="section-card">
       <h3>Restaurant Management System</h3>
       <p><strong>Tech:</strong> C#, ASP.NET, SQL Server, Entity Framework, HTML, CSS</p>
       <ul>
@@ -235,7 +220,7 @@
       </ul>
     </div>
 
-    <div class="card">
+    <div class="section-card">
       <h3>Hardware Shop Management System</h3>
       <p><strong>Tech:</strong> WinForms, C#, SQL Server, Entity Framework</p>
       <ul>
@@ -249,44 +234,52 @@
   <section id="education">
     <h2>Education</h2>
 
-    <div class="education-item">
+    <div class="section-card">
       <h3>Master of Computer Applications (MCA)</h3>
       <p>Finolex Academy — 2025</p>
-      <p><span>CGPA:</span> 8.4</p>
+      <p><strong>CGPA:</strong> 8.4</p>
     </div>
 
-    <div class="education-item">
+    <div class="section-card">
       <h3>Bachelor of Commerce (B.Com)</h3>
       <p>Gogate Jogalekar College — 2023</p>
-      <p><span>CGPA:</span> 8.78</p>
+      <p><strong>CGPA:</strong> 8.78</p>
     </div>
   </section>
 
   <!-- CERTIFICATIONS -->
   <section id="certifications">
     <h2>Certifications</h2>
-    <ul>
-      <li>Java Programming Fundamentals — SpringBoard</li>
-      <li>Cyber Security & Privacy Fundamentals — NPTEL</li>
-      <li>Web Development Fundamentals — IBM</li>
-    </ul>
+    <div class="section-card">
+      <ul>
+        <li>Java Programming Fundamentals — SpringBoard</li>
+        <li>Cyber Security & Privacy Fundamentals — NPTEL</li>
+        <li>Web Development Fundamentals — IBM</li>
+      </ul>
+    </div>
   </section>
 
   <!-- ACHIEVEMENTS -->
   <section id="achievements">
     <h2>Achievements</h2>
-    <ul>
-      <li><strong>Marketing Lead — Excellentia 2K25</strong></li>
-      <li><strong>Photography & Videography Coordinator — Finolex MCA Dept</strong></li>
-    </ul>
+
+    <div class="section-card">
+      <ul>
+        <li><strong>Marketing Lead — Excellentia 2K25</strong></li>
+        <li><strong>Photography & Videography Coordinator — Finolex MCA Dept</strong></li>
+      </ul>
+    </div>
 
     <h3 style="margin-top:20px;">Core Strengths</h3>
-    <ul>
-      <li>Problem Solving</li>
-      <li>Agile Collaboration</li>
-      <li>Analytical Thinking</li>
-      <li>Time Management</li>
-    </ul>
+
+    <div class="section-card">
+      <ul>
+        <li>Problem Solving</li>
+        <li>Agile Collaboration</li>
+        <li>Analytical Thinking</li>
+        <li>Time Management</li>
+      </ul>
+    </div>
   </section>
 
   <!-- FOOTER -->
@@ -298,4 +291,3 @@
 
 </body>
 </html>
-
