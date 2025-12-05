@@ -242,7 +242,7 @@
         }
     </style>
 </head>
-<body>
+
     <div class="page-wrap">
         <!-- NAVBAR -->
         <div class="navbar fade-up" role="navigation" aria-label="Primary">
@@ -410,5 +410,3 @@
             © 2025 Dhruv Manohar Patel
         </footer>
  
-</body>
-</html>
