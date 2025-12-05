@@ -369,16 +369,17 @@
             </div>
         </div>
 
-        <!-- CERTIFICATIONS -->
+       <!-- CERTIFICATIONS -->
         <div id="certifications" class="section fade-up" aria-labelledby="certifications-heading" role="region">
             <h2 id="certifications-heading"><i class="fa-solid fa-certificate"></i> Certifications</h2>
-            <div class="section-card" style="margin-top:12px"></div>
+            <div class="section-card" style="margin-top:12px">
                 <ul>
                     <li>Java Programming Fundamentals — SpringBoard</li>
                     <li>Cyber Security & Privacy Fundamentals — NPTEL</li>
                     <li>Web Development Fundamentals — IBM</li>
                 </ul>
             </div>
+    
        
 
         <!-- ACHIEVEMENTS -->
