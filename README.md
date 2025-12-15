@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -11,17 +10,17 @@
 
     <style>
         :root{
-            --bg-1:#0a0e27;
-            --bg-2:#151937;
-            --primary:#6366f1;
-            --primary-light:#818cf8;
-            --accent:#a78bfa;
-            --text:#e2e8f0;
-            --text-muted:#94a3b8;
-            --card-bg:rgba(30, 41, 59, 0.5);
-            --glass-border:rgba(148, 163, 184, 0.1);
-            --shadow:0 20px 50px rgba(0, 0, 0, 0.3);
-            --glow:0 0 30px rgba(99, 102, 241, 0.3);
+            --bg-1:#eaf4ff;
+            --bg-2:#d6ebff;
+            --primary:#0b63f6;
+            --primary-light:#094bb5;
+            --accent:#6fb3ff;
+            --text:#02213b;
+            --text-muted:#4b6b86;
+            --card-bg:rgba(255, 255, 255, 0.75);
+            --glass-border:rgba(11, 99, 246, 0.1);
+            --shadow:0 20px 50px rgba(11, 99, 246, 0.12);
+            --glow:0 0 30px rgba(11, 99, 246, 0.3);
         }
 
         *{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
@@ -45,8 +44,8 @@
             width:100%;
             height:100%;
             background:
-                radial-gradient(circle at 20% 20%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(167, 139, 250, 0.1) 0%, transparent 50%);
+                radial-gradient(circle at 20% 20%, rgba(11, 99, 246, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(111, 179, 255, 0.08) 0%, transparent 50%);
             pointer-events:none;
             z-index:0;
         }
@@ -81,7 +80,7 @@
             justify-content:center;
             padding:0.75rem 1.5rem;
             backdrop-filter:blur(20px) saturate(180%);
-            background:rgba(30, 41, 59, 0.6);
+            background:rgba(255, 255, 255, 0.5);
             border:1px solid var(--glass-border);
             box-shadow:var(--shadow);
             border-radius:50px;
@@ -145,14 +144,14 @@
             top:-20%;
             width:500px;
             height:500px;
-            background:radial-gradient(circle, rgba(99, 102, 241, 0.3), transparent 70%);
+            background:radial-gradient(circle, rgba(11, 99, 246, 0.2), transparent 70%);
             filter:blur(60px);
             animation:pulse 8s ease-in-out infinite;
         }
 
         @keyframes pulse{
-            0%, 100%{transform:scale(1);opacity:0.3}
-            50%{transform:scale(1.1);opacity:0.5}
+            0%, 100%{transform:scale(1);opacity:0.2}
+            50%{transform:scale(1.1);opacity:0.35}
         }
 
         section.hero .hero-left{
@@ -178,7 +177,7 @@
             content:"";
             position:absolute;
             inset:0;
-            background:linear-gradient(135deg, transparent, rgba(99, 102, 241, 0.2));
+            background:linear-gradient(135deg, transparent, rgba(11, 99, 246, 0.15));
             opacity:0;
             transition:opacity 0.3s ease;
         }
@@ -266,7 +265,7 @@
             border:2px solid var(--glass-border);
         }
 
-        .btn:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(99, 102, 241, 0.4)}
+        .btn:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(11, 99, 246, 0.3)}
 
         aside.hero-right{
             z-index:2;
@@ -357,8 +356,8 @@
 
         .section-card:hover{
             transform:translateY(-5px);
-            box-shadow:0 25px 60px rgba(0, 0, 0, 0.4);
-            border-color:rgba(99, 102, 241, 0.3);
+            box-shadow:0 25px 60px rgba(11, 99, 246, 0.15);
+            border-color:rgba(11, 99, 246, 0.3);
         }
 
         p{color:var(--text-muted);margin-top:0.75rem;line-height:1.7}
@@ -375,7 +374,7 @@
             max-width:600px;
             border-radius:16px;
             margin:1rem 0;
-            filter:drop-shadow(0 10px 30px rgba(99, 102, 241, 0.3));
+            filter:drop-shadow(0 10px 30px rgba(11, 99, 246, 0.2));
         }
 
         /* PROJECTS */
@@ -413,8 +412,8 @@
 
         article.project-card:hover{
             transform:translateY(-8px);
-            box-shadow:0 25px 60px rgba(99, 102, 241, 0.3);
-            border-color:rgba(99, 102, 241, 0.5);
+            box-shadow:0 25px 60px rgba(11, 99, 246, 0.2);
+            border-color:rgba(11, 99, 246, 0.4);
         }
 
         article.project-card h3{
@@ -584,7 +583,7 @@
         <section id="skills" class="block skills fade-up">
             <h2><i class="fa-solid fa-code"></i> Tech Stack</h2>
             <section class="section-card">
-                <img src="https://skillicons.dev/icons?i=cs,dotnet,java,html,css,js,git,github,visualstudio,mysql&theme=dark"
+                <img src="https://skillicons.dev/icons?i=cs,dotnet,java,html,css,js,git,github,visualstudio,mysql"
                      alt="Technology stack icons">
                 <p>C#, .NET, SQL Server, EF, ASP.NET, WinForms, HTML/CSS/JS and tooling (Git, Visual Studio)</p>
             </section>
